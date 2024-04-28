@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet author="jacques" id="create-table-RequestLog">
+        <comment>Create RequestLog table</comment>
+        <createTable tableName="request_log">
+            <column name="id" type="VARCHAR(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="uri" type="VARCHAR(250)"/>
+            <column name="request_time_stamp" type="DATETIME(6)"/>
+            <column name="ip_address" type="VARCHAR(50)"/>
+            <column name="country_code" type="VARCHAR(50)"/>
+            <column name="isp" type="VARCHAR(50)"/>
+            <column name="response_code" type="NUMBER(3)"/>
+            <column name="duration" type="NUMBER(9)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

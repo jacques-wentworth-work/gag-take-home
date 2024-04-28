@@ -1,0 +1,8 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/master-changelog.xml
+    drop-first: false
+
+ip-api:
+  url: http://localhost:18080

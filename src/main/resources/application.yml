@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: gag-take-home
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/gag
+    username: gag
+    password: gag
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/master-changelog.xml
+    drop-first: false
+
+server:
+  servlet:
+    context-path: /gag-take-home
+
+ip-api:
+  url: http://ip-api.com
